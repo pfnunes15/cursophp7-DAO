@@ -8,8 +8,35 @@
 
 require_once ("config.php");
 
-$root = new Usuario();
+//Carrega um usuário
+// $root = new Usuario();
+//$root->loadById(3);
+//echo $root;
 
-$root->loadById(3);
+//Carrega lista de usuários
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
-echo $root;
+//Carrega lista de usuarios com search
+//$search = Usuario::search("jo");
+//echo json_encode($search);
+
+//carrega um usário usando o login e a senha
+//$usuario = new Usuario();
+//$usuario->login("root", "!@#$");
+//echo $usuario;
+
+/*CRIANDO UM NOVO USUÁRIO
+
+$aluno = new Usuario("aluno", "@lun0");
+$aluno->insert();
+
+echo $aluno;
+    */
+
+$usuario = new Usuario();
+
+$usuario->loadById(8);
+$usuario->update("professor", "!@#$%&/()");
+
+echo $usuario;
